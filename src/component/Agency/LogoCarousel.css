@@ -1,0 +1,22 @@
+.logo-carousel-wrapper {
+  width: 100%;
+  padding: 20px 0;
+  background-image: radial-gradient(at top center, #A150FF 0%, #FFFFFF00 100%);
+}
+
+.logo-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-slide img {
+  max-width: 100%;
+  height: auto;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.logo-slide img:hover {
+  opacity: 1;
+}

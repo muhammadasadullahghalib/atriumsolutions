@@ -1,0 +1,317 @@
+/* =====================
+   WHY SECTION
+===================== */
+
+.why {
+    background: #050505;
+    color: #fff;
+    min-height: 100vh;
+    padding: 70px 0;
+    font-family: "Inter", sans-serif;
+}
+
+/* LEFT CONTENT */
+
+.left {
+    padding-left: 80px;
+}
+
+.tiny-title {
+    font-size: 12px;
+    color: #bfbfbf;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.title {
+font-weight: 700;
+font-style: Bold;
+font-size: 113px;
+leading-trim: NONE;
+line-height: 110px;
+letter-spacing: -4%;
+vertical-align: middle;
+
+}
+
+.title span {
+    color: #8f3dff;
+}
+
+.intro {
+    font-size: 14px;
+    color: #b0b0b0;
+    max-width: 480px;
+}
+
+.left p {
+font-weight: 400;
+font-style: Regular;
+font-size: 14px;
+leading-trim: NONE;
+line-height: 18px;
+letter-spacing: -4%;
+vertical-align: middle;
+
+}
+
+
+/* RIGHT VISUAL */
+
+.right {
+    display: flex;
+    justify-content: center;
+}
+
+/* IMPORTANT: reference container */
+.visual {
+    position: relative;
+    width: 360px;
+    margin: auto;
+}
+
+.visual img {
+    width: 300px;
+    position: relative;
+    z-index: 1;
+    animation: floatY 2.4s ease-in-out infinite;
+}
+
+/* STAT CARDS */
+
+.stat-card-exact {
+    position: absolute;
+    width: 206px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+
+    background: linear-gradient(
+        158.11deg,
+        rgba(161, 80, 255, 0) 9.72%,
+        #A150FF 178.93%
+    );
+
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    animation: floatX 2.9s ease-in-out infinite;
+}
+
+.stat-number {
+    font-size: 25px;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.stat-number .plus {
+    color: #8f3dff;
+    margin-left: 2px;
+}
+
+.stat-text {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.78);
+}
+
+/* DESKTOP POSITIONS */
+
+.s1 {
+    top: 120px;
+    left: -180px;
+    animation-delay: 0.2s;
+}
+
+.s2 {
+    top: 50px;
+    right: -70px;
+    animation-delay: 0.6s;
+}
+
+.s3 {
+    bottom: 175px;
+    right: -40px;
+    animation-delay: 0.4s;
+}
+
+.s4 {
+    bottom: 70px;
+    left: -130px;
+    animation-delay: 0.8s;
+}
+
+@keyframes floatY {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes floatX {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(12px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .visual img,
+    .stat-card-exact {
+        animation: none;
+    }
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+/* Tablets */
+@media (max-width: 992px) {
+
+    .left {
+        padding-left: 30px;
+    }
+
+    .title {
+        font-size: 56px;
+    }
+
+    .visual {
+        width: 300px;
+    }
+
+    .visual img {
+        width: 250px;
+    }
+
+    .stat-card-exact {
+        width: 180px;
+        height: 110px;
+    }
+
+    .s1 { left: -120px; }
+    .s4 { left: -100px; }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .why {
+        min-height: auto;
+        padding: 50px 0;
+    }
+
+    .left {
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 38px;
+        line-height: 1.15;
+    }
+
+    .intro {
+        margin: 0 auto;
+    }
+
+    .right {
+        margin-top: 40px;
+    }
+
+    .visual {
+        width: 260px;
+    }
+
+    .visual img {
+        width: 220px;
+    }
+
+    .stat-card-exact {
+        width: 140px;
+        height: 90px;
+    }
+
+    .stat-number {
+        font-size: 18px;
+    }
+
+    .stat-text {
+        font-size: 12px;
+    }
+
+    /* Cards image ke bilkul upar */
+    .s1 {
+        top: 40px;
+        left: -50px;
+    }
+
+    .s2 {
+        top: 0;
+        right: -40px;
+    }
+
+    .s3 {
+        bottom: 80px;
+        right: -30px;
+    }
+
+    .s4 {
+        bottom: 20px;
+        left: -40px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+
+    .title {
+        font-size: 30px;
+    }
+
+    .visual {
+        width: 220px;
+    }
+
+    .visual img {
+        width: 190px;
+    }
+
+    .stat-card-exact {
+        width: 130px;
+        height: 85px;
+    }
+
+    .s1 {
+        top: 30px;
+        left: -30px;
+    }
+
+    .s2 {
+        top: -10px;
+        right: -25px;
+    }
+
+    .s3 {
+        bottom: 60px;
+        right: -20px;
+    }
+
+    .s4 {
+        bottom: 10px;
+        left: -25px;
+    }
+}

@@ -1,0 +1,170 @@
+.hero-section {
+  color: #fff;
+  display: flex;
+  align-items: ceter;
+}
+.hero-subtitle {
+    font-size: 17px;
+    opacity: 0.9;
+    display: inline-block;
+    /* padding-left: 80px; */
+    position: relative;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.hero-titles {
+
+/* font-family: Century Gothic; */
+font-weight: 700;
+font-style: Bold;
+font-size: 110px !important;
+leading-trim: NONE;
+line-height: 110px !important;
+/* letter-spacing: -4%; */
+
+
+
+}
+.p-span {
+
+font-weight: 700;
+font-style: Bold;
+font-size: 17px;
+leading-trim: NONE;
+line-height: 19px;
+letter-spacing: -4%;
+vertical-align: middle;
+
+}
+
+.text-purple {
+  color: #8b5cf6;
+}
+
+.hero-title .dot {
+  color: #8b5cf6;
+}
+
+.hero-text {
+  max-width: 420px;
+  color: #aaa;
+  font-size: 16px;
+  line-height: 1.7;
+}
+.hero-desc {
+ 
+
+font-weight: 400;
+font-style: Regular;
+font-size: 17px;
+leading-trim: NONE;
+line-height: 19px;
+letter-spacing: -4%;
+vertical-align: middle;
+
+
+}
+
+
+
+.text-type {
+  display: inline-block;
+  white-space: pre-wrap;
+  color: #8b5cf6;
+}
+
+.text-type__cursor {
+  margin-left: 0.25rem;
+  display: inline-block;
+  opacity: 1;
+  color: #8b5cf6;
+
+}
+
+.text-type__cursor--hidden {
+  display: none;
+}
+
+
+/* =======================
+   RESPONSIVE STYLES
+======================= */
+
+/* Tablets (max-width: 992px) */
+@media (max-width: 992px) {
+
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero-subtitle {
+    padding-left: 0;
+  }
+
+  .hero-subtitle::before {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: 48px;
+    letter-spacing: -2%;
+  }
+
+  .hero-text,
+  .hero-desc {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .image-wrapper {
+    max-width: 80%;
+  }
+
+  .hero-image {
+    width: 100%;
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+
+  .hero-title {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .hero-desc {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .hero-text {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+
+  .hero-title {
+    font-size: 30px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+  }
+
+  .text-type {
+    font-size: 30px;
+  }
+}

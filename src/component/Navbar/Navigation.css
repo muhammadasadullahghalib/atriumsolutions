@@ -1,0 +1,138 @@
+/* ===== BASE ===== */
+.main-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 40px 0;
+  transition: all 0.3s ease;
+}
+
+.main-navbar.scrolled {
+  padding: 10px 0;
+}
+
+/* ===== GLASS BAR ===== */
+.nav-glass {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.01);
+
+  backdrop-filter: blur(30px);
+
+  -webkit-backdrop-filter: blur(14px);
+
+  border: 0.5px solid rgb(117, 114, 114);
+  border-radius: 10px;
+  /* border-bottom: none; */
+  padding: 25px 28px;
+  box-shadow: 0 10px 20px #000;
+}
+
+/* ===== LOGO ===== */
+.nav-logo img {
+  height: 44px;
+}
+
+/* ===== CENTER MENU ===== */
+.nav-center {
+  display: flex;
+  gap: 50px;
+}
+
+.nav-center .nav-link {
+  color: rgba(255, 255, 255, 1);
+  font-size: 14px;
+  opacity: 0.85;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-center .nav-link:hover,
+.nav-center .nav-link.active {
+  color: rgba(255, 255, 255, 1);
+}
+
+/* ===== BUTTON ===== */
+.contact-nav-btn {
+  padding: 8px 30px;
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 1);
+  font-size: 14px;
+  text-decoration: none;
+  border: 0.5px solid rgba(255, 255, 255, 1);
+  background: linear-gradient(
+    116.81deg,
+    rgba(0, 0, 0, 0.5) 32.33%,
+    rgba(161, 80, 255, 0.5) 101.21%
+  );
+
+box-shadow: 0px 0px 12px 0px #A150FF;
+backdrop-filter: blur(12px)
+
+}
+
+/* ===== MOBILE ===== */
+.mobile-hamburger {
+  display: none;
+  font-size: 28px;
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .nav-center,
+  .contact-btn {
+    display: none;
+  }
+
+  .mobile-hamburger {
+    display: block;
+  }
+  .contact-nav-btn {
+    display: none;
+  }
+}
+
+/* ===== MOBILE MENU ===== */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  background: #050505;
+  z-index: 9999;
+  transition: right 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+.close-btn {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-size: 28px;
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+}
+
+.mobile-nav-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
+}
+
+.mobile-nav-content a {
+  color: rgba(255, 255, 255, 1);
+  font-size: 20px;
+  text-decoration: none;
+}

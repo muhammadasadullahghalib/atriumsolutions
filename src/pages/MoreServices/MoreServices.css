@@ -1,0 +1,231 @@
+.marketerbg-image {
+  position: relative;
+  background-image: url("../../assets/marketerbg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: center; */
+  overflow: hidden;
+}
+
+/* Dark overlay */
+.marketerbg-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #050505;
+  opacity: 0.2; /* 20% opacity */
+  z-index: 1;
+}
+
+/* Content above overlay */
+.marketerbg-image > * {
+  position: relative;
+  z-index: 2;
+}
+
+.marketing-title {
+font-weight: 700;
+font-style: Bold;
+font-size: 90px;
+leading-trim: NONE;
+/* line-height: 120px; */
+letter-spacing: -4%;
+text-align: center;
+vertical-align: middle;
+margin-top: 60px;
+}
+
+.boldp {
+font-weight: 700;
+font-style: Bold;
+font-size: 24px;
+leading-trim: NONE;
+/* line-height: 100px; */
+letter-spacing: 4%;
+text-align: center;
+vertical-align: middle;
+
+}
+
+.seobg {
+  position: relative;
+  background-image: url("../../assets/seo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: center; */
+  overflow: hidden;
+}
+
+/* Dark overlay */
+.seobg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #050505;
+  opacity: 0.5; /* 20% opacity */
+  z-index: 1;
+}
+
+/* Content above overlay */
+.seobg > * {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+.seo-titles {
+font-weight: 700;
+font-style: Bold;
+font-size: 83px;
+leading-trim: NONE;
+line-height: 80px;
+letter-spacing: -4%;
+vertical-align: middle;
+
+}
+.web-titles {
+font-weight: 700;
+font-style: Bold;
+font-size: 73px;
+leading-trim: NONE;
+line-height: 80px;
+letter-spacing: -4%;
+vertical-align: middle;
+
+
+}
+.graph-titles {
+font-weight: 700;
+font-style: Bold;
+font-size: 65px;
+leading-trim: NONE;
+line-height: 80px;
+letter-spacing: -4%;
+vertical-align: middle;
+
+
+}
+
+
+.webbg-image {
+  position: relative;
+  background-image: url("../../assets/webbg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: center; */
+  overflow: hidden;
+}
+
+/* Dark overlay */
+.webbg-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #050505;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+/* Content above overlay */
+.webbg-image > * {
+  position: relative;
+  z-index: 2;
+}
+.probg {
+  position: relative;
+  background-image: url("../../assets/Professional.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: center; */
+  overflow: hidden;
+}
+
+/* Dark overlay */
+.probg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #050505;
+  opacity: 0.8; /* 20% opacity */
+  z-index: 1;
+}
+
+/* Content above overlay */
+.probg > * {
+  position: relative;
+  z-index: 2;
+}
+
+.videobg-image {
+  position: relative;
+  background-image: url("../../assets/videopg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: center; */
+  overflow: hidden;
+}
+
+/* Dark overlay */
+.videobg-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #050505;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+/* Content above overlay */
+.videobg-image > * {
+  position: relative;
+  z-index: 2;
+}
+.desbg-image {
+  position: relative;
+  background-image: url("../../assets/designbg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: center; */
+  overflow: hidden;
+}
+
+/* Dark overlay */
+.desbg-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #050505;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+/* Content above overlay */
+.desbg-image > * {
+  position: relative;
+  z-index: 2;
+}
+.cusbg-image {
+  position: relative;
+  background-image: url("../../assets/customerbg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: center; */
+  overflow: hidden;
+}
+
+/* Dark overlay */
+.cusbg-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #050505;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+/* Content above overlay */
+.cusbg-image > * {
+  position: relative;
+  z-index: 2;
+}
