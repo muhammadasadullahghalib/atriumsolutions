@@ -4,6 +4,21 @@
     background-position: right;
     background-size: contain;
     background-repeat: no-repeat;
+    position: relative;
+    isolation: isolate;
+}
+
+.consulting-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: transparent;
+    z-index: 0;
+}
+
+.consulting-section > * {
+    position: relative;
+    z-index: 1;
 }
 
 .contact-section {
@@ -109,7 +124,49 @@ vertical-align: middle;
 }
 
 @media (max-width: 768px) {
+    .consulting-section {
+        background-image: url(../../assets/consulting_bgmob.png);
+        background-position: right center;
+        background-size: 120% auto;
+        padding: 60px 0 40px;
+    }
+
+    .consulting-section::before {
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .contact-subtitle {
+        padding-left: 70px;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .contact-subtitle::before {
+        display: block;
+        width: 55px;
+        background: #d0d0d0;
+    }
+
+    .contact-desc {
+        font-size: 12.5px;
+        line-height: 1.55;
+    }
+
     .contact-title {
-        font-size: 42px;
+        font-size: 38px;
+        line-height: 1.05;
+    }
+
+    .contact-form {
+        max-width: 100%;
+    }
+
+    .contact-input {
+        font-size: 13px;
+    }
+
+    .contact-btn {
+        font-size: 13px;
+        padding: 8px 20px !important;
     }
 }

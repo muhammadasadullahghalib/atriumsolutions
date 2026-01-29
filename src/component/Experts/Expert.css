@@ -1,11 +1,26 @@
 .expert-section {
   /* background-color: rgba(5, 5, 5, 1); */
   background-image: url(../../assets/experts.png);
-  height: 120vh;
+  min-height: 120vh;
   width: 100%;
-  background-position: top;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+  isolation: isolate;
+}
+
+.expert-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.expert-section > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* jab visible ho */
@@ -26,25 +41,71 @@ vertical-align: middle;
 }
 
 .expert-desc {
-font-weight: 700;
-font-style: Bold;
-font-size: 16px;
-leading-trim: NONE;
-line-height: 23px;
-letter-spacing: -4%;
-vertical-align: middle;
-
-
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 16px;
+  leading-trim: NONE;
+  line-height: 23px;
+  letter-spacing: -4%;
+  vertical-align: middle;
 }
 
-.expert-desc span {
-font-weight: 400;
-font-style: Regular;
-font-size: 16px;
-leading-trim: NONE;
-line-height: 23px;
-letter-spacing: -4%;
-vertical-align: middle;
+.expert-lines {
+  display: grid;
+  gap: 10px;
+}
 
+.expert-line {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #d9d9d9;
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin: 0;
+}
 
+.expert-lines--accent .expert-line {
+  color: #f5f5f5;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .expert-section {
+    background-image: url(../../assets/expert_bgmob.png);
+    background-position: right center;
+    min-height: auto;
+    padding: 60px 0 40px;
+  }
+
+  .exp-subtitle {
+    font-size: 12px;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+
+  .hero-content {
+    text-align: center;
+    /* max-width: 320px; */
+    margin: 0 auto;
+  }
+
+  .expert-desc {
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+
+  .expert-lines {
+    padding: 0 16px;
+    gap: 6px;
+  }
+
+  .expert-line {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .expert-section .hero-titles {
+    font-size: 38px !important;
+    line-height: 1.05 !important;
+  }
 }

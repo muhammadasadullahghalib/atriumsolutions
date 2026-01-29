@@ -4,7 +4,7 @@ import { Play } from 'lucide-react';
 import ImageCardSlider from './ImageCardSlider';
 function Cases() {
   return (
-       <section id='portfolio' className="why">
+       <section id='portfolio' className="why cases-section">
       <Container className="px-3">
           <span
           className="contact-subtitle text-white"

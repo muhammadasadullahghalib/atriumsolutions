@@ -38,8 +38,10 @@ vertical-align: middle;
   height: 120vh;
   width: 100%;
   background-repeat: no-repeat;
-  /* background-position:; */
+  background-position: center;
   background-size: cover;
+  position: relative;
+  isolation: isolate;
 }
 
 
@@ -288,38 +290,60 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 @media (max-width: 768px) {
+  .services-section {
+    padding-top: 20px;
+  }
+
+  .services-section .pt-5 {
+    padding-top: 0 !important;
+  }
+
+  .services-section .mt-5 {
+    margin-top: 0 !important;
+  }
 
   .serv-title {
-    font-size: 36px;
-    line-height: 1.2;
+    font-size: 32px;
+    line-height: 1.1;
   }
 
   .serv-subtitle {
-    font-size: 18px;
-    padding: 6px 18px;
+    font-size: 12px;
+    padding: 0;
   }
 
   .serv_bg {
-    background-size: 520px;
+    background-image: url(../../assets/serv_bgmobile.png);
+    background-size: cover;
+    background-position: center;
     padding: 60px 0;
   }
 
+  .serv_bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
   .services-pills {
-    gap: 12px;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
   }
 
   .service-pill {
-    padding: 10px 20px;
-    font-size: 13px;
+    width: 220px;
+    padding: 8px 18px;
+    font-size: 12px;
+    border-radius: 22px;
+    text-align: center;
   }
 
   
   .service-click-card {
-    width: 90%;
-    max-width: 320px;
-    height: auto;
-    padding: 16px;
-    text-align: center;
+    display: none;
   }
 
   .project-active__thumb {
@@ -350,20 +374,28 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
 
   .serv-subtitle {
-    font-size: 16px;
+    font-size: 11px;
   }
 
   .serv_bg {
-    background-size: 380px;
+    background-size: cover;
   }
 
   .service-pill {
-    font-size: 12px;
-    padding: 8px 16px;
+    width: 200px;
+    font-size: 11px;
+    padding: 7px 14px;
   }
 
   .project-active__btn {
     font-size: 0.8rem;
     padding: 0.45rem 1.1rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .services-pills {
+    flex-direction: column;
+    align-items: center;
   }
 }

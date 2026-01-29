@@ -36,7 +36,7 @@ function Consulting() {
              <span className="contact-subtitle text-white" data-aos="fade-left"
                                     data-aos-anchor="#example-anchor"
                                     data-aos-offset="500"
-                                    data-aos-duration="1500">Let’s get started</span>
+                                    data-aos-duration="1500">Let's get started</span>
             <h1 className="contact-title">
               Get a Free <br />
               Consultation<span className="text-purple">.</span>

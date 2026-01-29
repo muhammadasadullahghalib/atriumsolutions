@@ -4,7 +4,7 @@ import { Play } from 'lucide-react';
 import Benefits from './Benefits';
 function Career() {
     return (
-        <section id='career' className="why">
+        <section id='career' className="why career-section">
             <Container fluid className="px-5">
                 <Row className="align-items-center mb-5">
                     <span className="hero-subtitle" data-aos="fade-left"

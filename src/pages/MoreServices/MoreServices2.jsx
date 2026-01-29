@@ -52,7 +52,7 @@ function MoreServices2() {
         <Container>
           <Row className="align-items-center min-vh-100">
             <Col lg={8} md={12}>
-              <div className="hero-content">
+              <div className="hero-contents">
                 <span
                   className="contact-subtitle"
                   data-aos="fade-left"

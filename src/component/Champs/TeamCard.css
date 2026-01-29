@@ -68,6 +68,25 @@ background: linear-gradient(158.11deg, rgba(161, 80, 255, 0) 9.72%, #A150FF 178.
   }
 }
 
+@media (max-width: 768px) {
+  .team-block-style2 {
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .team-block-style2 .info-box {
+    margin-top: 12px;
+  }
+
+  .team-block-style2 .info-box .team-title {
+    font-size: 14px;
+  }
+
+  .team-block-style2 .info-box .team-subtitle {
+    font-size: 12px;
+  }
+}
+
 
 .team-block-style2 .info-box {
   position: relative;

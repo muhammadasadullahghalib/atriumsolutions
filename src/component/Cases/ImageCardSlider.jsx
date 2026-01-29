@@ -131,7 +131,7 @@ export default function ImageCardSlider() {
             onClick={() => go(-1)}
             aria-label="Prev"
           >
-            ‹
+            {"<"}
           </button>
           <button
             className="nav-btn"
@@ -139,7 +139,7 @@ export default function ImageCardSlider() {
             onClick={() => go(1)}
             aria-label="Next"
           >
-            ›
+            {">"}
           </button>
         </div>
       </div>
@@ -176,7 +176,11 @@ export default function ImageCardSlider() {
                 activate(i, true)
               }
             >
-              <img className="project-card__bg" src={card.bg} alt="" />
+              <img
+                className="project-card__bg"
+                src={card.bg}
+                alt=""
+              />
 
               <div className="project-card__content">
                 <img
@@ -193,7 +197,7 @@ export default function ImageCardSlider() {
   className={`project-card__btn ${i === current ? "active" : ""}`}
   onClick={(e) => e.stopPropagation()}
 >
-  <span className="arrow-icon">➜</span>
+  <span className="arrow-icon">{">"}</span>
 </Link>
 
 
@@ -219,3 +223,4 @@ export default function ImageCardSlider() {
     </section>
   );
 }
+

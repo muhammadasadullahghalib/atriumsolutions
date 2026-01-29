@@ -9,9 +9,14 @@
    
 }
 
+body {
+   background-color: #050505;
+}
+
 .bg-image {
    background-image: url(../src/assets/Rectangle.png);
    background-size: cover;
+   background-position: center;
 }
 
 .Up_btn {
@@ -32,4 +37,39 @@
 
 .line_border hr {
    border: 2px solid #A150FF;
+}
+
+@media (max-width: 768px) {
+   .bg-image {
+      background-image: url("../src/assets/serv_bgmobile.png");
+   }
+
+   .main-navbar,
+   section,
+   .hero-content,
+   .contact-section,
+   .contact-form,
+   .contact-desc,
+   .services-section,
+   .expert-section,
+   .consulting-section,
+   .choose-section,
+   .cases-section,
+   .career-section,
+   .champs-section {
+      text-align: left !important;
+   }
+
+   .hero-content,
+   .services-section .serv-title,
+   .services-section .serv-subtitle,
+   .expert-section .hero-content,
+   .consulting-section .contact-title,
+   .consulting-section .contact-desc,
+   .cases-section .title,
+   .career-section .title,
+   .champs-section .title {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+   }
 }

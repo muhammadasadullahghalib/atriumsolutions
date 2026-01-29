@@ -4,7 +4,7 @@ import { Play } from 'lucide-react';
 import TeamCard from './TeamCard';
 function Champs() {
   return (
-    <section id='team' className="why bg_champs">
+    <section id='team' className="why champs-section bg_champs">
       <Container fluid className="px-5">
         <Row className="align-items-center">
           <span className="contact-subtitle" data-aos="fade-left"

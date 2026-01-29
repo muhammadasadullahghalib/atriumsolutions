@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Logo from "../../assets/atruimlogo.png";
+import MobLogo from "../../assets/moblogo.png";
 import "./Navigation.css";
 
 function Navigation() {
@@ -27,7 +28,8 @@ function Navigation() {
 
             {/* Logo */}
             <NavLink to="/" className="nav-logo">
-              <img src={Logo} alt="Atrium Logo" />
+              <img src={Logo} alt="Atrium Logo" className="logo-desktop" />
+              <img src={MobLogo} alt="Atrium Logo" className="logo-mobile" />
             </NavLink>
 
             {/* Desktop Menu */}
@@ -41,7 +43,7 @@ function Navigation() {
             </Nav>
 
             {/* Button */}
-            <NavLink to="/contact" className="contact-nav-btn">
+            <NavLink to="/contact" className="contact-nav-btn d-lg-flex d-none">
               Contact Now
             </NavLink>
 

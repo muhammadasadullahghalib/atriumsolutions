@@ -1,0 +1,3 @@
+- [x] Add @media (max-width: 992px) for tablet adjustments
+- [x] Add @media (max-width: 576px) for small phone adjustments
+- [x] Test responsiveness across devices (dev server running on localhost:5174)

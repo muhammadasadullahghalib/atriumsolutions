@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import './Services.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const services = [
   {
@@ -65,7 +65,11 @@ const services = [
 function Services() {
   const [hovered, setHovered] = useState(null);
   const [clicked, setClicked] = useState(null);
+  const [isMobile, setIsMobile] = useState(
+    window.matchMedia('(max-width:767px)').matches
+  );
   const cardRef = useRef(null);
+  const navigate = useNavigate();
 
   const activeService = clicked || hovered;
 
@@ -77,6 +81,14 @@ function Services() {
     };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  useEffect(() => {
+    const onResize = () => {
+      setIsMobile(window.matchMedia('(max-width:767px)').matches);
+    };
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
   }, []);
 
   return (
@@ -96,13 +108,17 @@ function Services() {
                     <div
                       key={i}
                       className="service-pill"
-                      onMouseEnter={() => setHovered(service)}
-                      onMouseLeave={() => setHovered(null)}
-                      onClick={() =>
+                      onMouseEnter={() => !isMobile && setHovered(service)}
+                      onMouseLeave={() => !isMobile && setHovered(null)}
+                      onClick={() => {
+                        if (isMobile) {
+                          navigate(`/more-services/${service.id}`);
+                          return;
+                        }
                         setClicked(
                           clicked?.title === service.title ? null : service
-                        )
-                      }
+                        );
+                      }}
                     >
                       {service.title}
                     </div>

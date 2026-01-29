@@ -49,30 +49,39 @@ function Experts() {
               </h1>
 
               <p
-                className="expert-desc mt-5"
+                className="expert-desc mt-4"
                 data-aos="fade-left"
                 data-aos-anchor="#example-anchor"
                 data-aos-offset="500"
                 data-aos-duration="2500"
               >
-                Our digital company of professionals
+                We are Atrium Solutions, Born in Lahore
                 <br />
-                has been developing products for 15 years.
-                <br />
-                <br />
-                <span>
-                  Our purpose is sweet and simple Build<br></br>brands that
-                  matter, and build careers that last<br></br>We are not just a
-                  service company, we are a launchpad, a tribe,<br></br>a
-                  creative playground, a magnet for people who want more from
-                  <br></br>life than just a job
-                  <br></br>
-                  <br></br>
-                  If you are a client, welcome home<br></br>If you are talented,
-                  welcome family<br></br>If you are curious, welcome to the
-                  Atrium
-                </span>
+                Working with brands across the world
               </p>
+
+              <div className="expert-lines mt-4">
+                <p className="expert-line">
+                  Our purpose is sweet and simple Build brands that matter,
+                </p>
+                <p className="expert-line">
+                  and build careers that last We are not just a service company
+                </p>
+                <p className="expert-line">
+                  we are a launchpad, a tribe, a creative playground, a magnet
+                </p>
+                <p className="expert-line">
+                  for people who want more from life than just a job
+                </p>
+              </div>
+
+              <div className="expert-lines expert-lines--accent mt-3">
+                <p className="expert-line">If you are a client, welcome home</p>
+                <p className="expert-line">If you are talented, welcome family</p>
+                <p className="expert-line">
+                  If you are curious, welcome to the Atrium
+                </p>
+              </div>
             </div>
           </Col>
 

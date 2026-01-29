@@ -1,111 +1,163 @@
-.footer-bg {
-    background: #050505;
- 
-}
-
-.bottom-bar {
-    border-top: 1px solid #A150FF;
-}
-/* Footer.css */
 .footer {
-  background: #050505; /* normal bg */
+  background: #050505;
+  color: #d6d6d6;
+}
+.footer-transparent {
+  background: transparent;    
 }
 
-.footer--transparent {
-  display: none;
+.footer-inner {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 20px 0 22px;
 }
 
-.bottom-bar-content {
-    padding: 1rem;
-    display: flex;
-    /* height: 60px; */
-    max-width: 1200px;
-    margin: 0 7%;
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
+.footer-brand {
+  margin-bottom: 34px;
 }
 
-
-.footer-bg form {
-    padding-bottom: 15px;
-    display: flex; 
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 50px;
+.footer-logo {
+  width: 230px;
+  height: auto;
+  display: block;
 }
 
-.footer-bg form .far-icon {
-    color: #fff;
-    font-size: 18px;
-    margin-right: 10px;
+.footer-columns {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 0.9fr;
+  grid-template-areas:
+    "address services follow"
+    "hit services follow";
+  gap: 22px 90px;
+  align-items: start;
 }
 
-.footer-bg form input {
-    width: 100%;
-    background: transparent;
-    color: #ccc;
-    border: none;
-    outline: none;
+.footer-block {
+  font-size: 14.5px;
+  line-height: 1.7;
 }
 
-.footer-bg form button {
-    background: transparent;
-    /* color: #A150FF; */
-    border: none;
-    outline: none;
-    cursor: pointer;
-    
+.footer-heading {
+  color: #A150FF;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 10px;
 }
 
-.footer-bg form .fas-btn {
-    font-size: 16px;
-    color: #ffff;
+.footer-text {
+  margin: 0;
+  color: #d9d9d9;
 }
 
-.social-icons {
-    display: flex;
-        
-    gap: 5px;
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #d9d9d9;
 }
 
-.icons {
-    width: 40px;
-    height: 40px;
-    background-color: #A150FF;
-    border-radius: 50%;
-    color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.icons a {
-    color: #000;
+.footer-list li {
+  margin-bottom: 7px;
 }
 
-
-@media only screen and (max-width: 600px) {
- 
-    .bottom-bar {
-        font-size: 10px;
-    }
-
-
-  .bottom-bar-content {
-    padding: 1rem;
-    display: flex;
-    /* height: 60px; */
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
+.footer-address {
+  grid-area: address;
 }
 
+.footer-hit {
+  grid-area: hit;
+  margin-top: 14px;
 }
 
-.footer_line {
-    rotate: 90deg;
-    height: 190px;
+.footer-services {
+  grid-area: services;
+}
+
+.footer-follow {
+  grid-area: follow;
+}
+
+.footer-bottom {
+  border-top: 0;
+}
+
+.footer-bottom-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 18px 24px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+}
+
+.footer-bottom-links {
+  color: #bfbfbf;
+  font-size: 13px;
+}
+
+.footer-separator {
+  margin: 0 8px;
+  color: #A150FF;
+}
+
+.footer-bottom-copy {
+  color: #bfbfbf;
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .footer-inner {
+    padding: 26px 22px 18px;
+  }
+
+  .footer-logo {
+    width: 150px;
+  }
+
+  .footer-columns {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "hit address"
+      "services follow";
+    gap: 16px 26px;
+  }
+
+  .footer-block {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .footer-heading {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .footer-list li {
+    margin-bottom: 5px;
+  }
+
+  .footer-bottom-inner {
+    padding: 12px 18px 18px;
+  }
+
+  .footer-bottom-links,
+  .footer-bottom-copy {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 520px) {
+  .footer-inner {
+    padding: 24px 18px 16px;
+  }
+
+  .footer-columns {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "hit address"
+      "services follow";
+    gap: 14px 20px;
+  }
 }

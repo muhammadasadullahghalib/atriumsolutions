@@ -1,7 +1,8 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import { useEffect, useRef, useState } from 'react';
 import './Choose.css';
-import statue from '../../assets/Choose.png';
+import statueModel from '../../assets/marble+bust+3d+model.glb';
+import chooseImg from '../../assets/Choose.png';
 
 const AnimatedNumber = ({ value, start }) => {
   const [count, setCount] = useState(0);
@@ -39,6 +40,24 @@ const Stat = ({ value, label, className }) => {
   const [start, setStart] = useState(false);
   const number = parseInt(value, 10);
 
+  const handleMouseMove = (event) => {
+    const rect = event.currentTarget.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    const midX = rect.width / 2;
+    const midY = rect.height / 2;
+    const rotateX = ((midY - y) / midY) * 6;
+    const rotateY = ((x - midX) / midX) * 6;
+
+    event.currentTarget.style.setProperty('--tilt-x', `${rotateX}deg`);
+    event.currentTarget.style.setProperty('--tilt-y', `${rotateY}deg`);
+  };
+
+  const handleMouseLeave = (event) => {
+    event.currentTarget.style.setProperty('--tilt-x', '0deg');
+    event.currentTarget.style.setProperty('--tilt-y', '0deg');
+  };
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -56,16 +75,23 @@ const Stat = ({ value, label, className }) => {
   }, []);
 
   return (
-    <div ref={ref} className={`stat-card-exact ${className}`}>
-      <AnimatedNumber value={number} start={start} />
-      <div className="stat-text">{label}</div>
+    <div
+      ref={ref}
+      className={`stat-card-exact ${className}`}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+    >
+      <div className="stat-card-inner">
+        <AnimatedNumber value={number} start={start} />
+        <div className="stat-text">{label}</div>
+      </div>
     </div>
   );
 };
 
 export default function Choose() {
   return (
-    <section className="why">
+    <section className="why choose-section">
       <Container fluid className="px-5">
         <Row className="align-items-center">
           {/* LEFT CONTENT */}
@@ -106,7 +132,20 @@ export default function Choose() {
           {/* RIGHT CONTENT */}
           <Col lg={6} className="right">
             <div className="visual">
-              <img src={statue} alt="statue" className="img-fluid" />
+              <img
+                src={chooseImg}
+                alt="Choose us visual"
+                className="choose-image"
+              />
+              <model-viewer
+                src={statueModel}
+                alt="Marble bust 3D model"
+                className="choose-model"
+                rotation-per-second="18deg"
+                camera-controls
+                disable-zoom
+                shadow-intensity="0.35"
+              />
               <Stat value="64" label="Award Winning" className="s1" />
               <Stat value="264" label="Satisfied Clients" className="s2" />
               <Stat value="574" label="Successful Projects" className="s3" />

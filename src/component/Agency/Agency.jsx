@@ -12,10 +12,10 @@ import TextType from './TextType.jsx';
 function Agency() {
  
   return (
-  <section id='agency' className="bg-image hero-section">
-      <Container fluid className='px-5 mx-5 mt-5 pt-5'>
-        <Row className="align-items-center min-vh-100 mt-5">
-          
+  <section id='agency' className="hero-section">
+      <Container fluid className='hero-container px-5 mx-5 mt-5 pt-5'>
+        <Row className="align-items-center mx-auto min-vh-100 mt-5">
+
        
           <Col lg={8} md={12}>
             <div className="hero-content">
@@ -28,7 +28,8 @@ function Agency() {
      data-aos-anchor="#example-anchor"
      data-aos-offset="500"
      data-aos-duration="2000">
-                Creative <br></br>
+                <span className="hero-title-accent">Creative</span> <br></br>
+             <span className="hero-dynamic">
              <TextType 
   text={["Design.", "Branding.", "Elements.", "Coding."]}
   typingSpeed={75}
@@ -36,6 +37,8 @@ function Agency() {
   showCursor={true}
   cursorCharacter="|"
 />
+             </span>
+             <span className="hero-static">agency.</span>
 
               </h1>
 
